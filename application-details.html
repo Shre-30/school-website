@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - Bright Horizon Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(245, 245, 245);
+        }
+        .header {
+            background-color: rgb(134, 207, 207);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: rgb(79, 165, 165);
+            text-align: center;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: rgb(79, 165, 165);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .submit-btn {
+            background-color: rgb(95, 230, 95);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .submit-btn:hover {
+            background-color: rgb(79, 165, 165);
+        }
+        footer {
+            background-color: rgb(79, 165, 165);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Application Form</h1>
+        <p>Submit your application details to join Bright Horizon Academy.</p>
+    </div>
+
+    <div class="container">
+        <h2>Application Details</h2>
+        <p>Please fill out the form below to submit your application. Our admissions team will review your submission and get back to you with the next steps.</p>
+
+        <form action="submit-application.php" method="post">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" name="student_name" placeholder="Enter student's full name" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="grade">Grade Applying For</label>
+            <select id="grade" name="grade" required>
+                <option value="" disabled selected>Select grade</option>
+                <option value="1">Grade 1</option>
+                <option value="2">Grade 2</option>
+                <option value="3">Grade 3</option>
+                <option value="4">Grade 4</option>
+                <option value="5">Grade 5</option>
+                <option value="6">Grade 6</option>
+                <option value="7">Grade 7</option>
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+            </select>
+
+            <label for="parent-name">Parent/Guardian Name</label>
+            <input type="text" id="parent-name" name="parent_name" placeholder="Enter parent's full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+
+            <label for="documents">Upload Documents</label>
+            <input type="file" id="documents" name="documents" required>
+
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bright Horizon Academy. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Project - School Website</title>
+    <style>
+        
+        /* General Styles */
+        body {
+            background-color: #f0f4f8;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 15px;
+            background-color: rgb(146, 221, 197);
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .container img {
+            border: 2px solid #ddd;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-grow: 1;
+            padding-left: 1rem;
+        }
+
+        .content button {
+            background: rgb(235, 235, 25);
+            color: black;
+            height: 50px;
+            width: 190px;
+            border: 2px solid #176b17;
+            padding: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .content ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #004d4d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .content ul li a:hover {
+            background-color: #004d4d;
+            color: white;
+        }
+
+        .extra-content {
+            background: linear-gradient(to bottom right, #0c1a1a, #62c4af);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .extra-content h2 {
+            font-size: 2rem;
+            color: #a3e4e9;
+        }
+
+        .extra-content p, .extra-content ul {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .extra-content ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .section-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .flexbox-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .flexbox-card {
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .flexbox-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .flexbox-card h3 {
+            font-size: 1.5rem;
+            color: #004d4d;
+            margin-bottom: 10px;
+        }
+
+        .flexbox-card p {
+            color: #333;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #004d4d;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                padding-left: 0;
+            }
+
+            .content ul {
+                justify-content: center;
+            }
+
+            .extra-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .extra-content p, .extra-content ul {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content button {
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            .section-image {
+                max-width: 100%;
+            }
+
+            footer {
+                font-size: 10px;
+            }
+        }
+    </style>
+<body>
+    <div class="container">
+        <img src="BHA logo.jpg" alt="Logo">
+        <div class="content">
+            <button>ADMISSIONS OPEN FOR 2025-26</button>
+            <ul>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="admissions.html">ADMISSIONS</a></li>
+                <li><a href="campuses.html">OUR CAMPUSES</a></li>
+                <li><a href="campus-life.html">CAMPUS LIFE</a></li>
+                <li><a href="achievements.html">OUR ACHIEVEMENTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="extra-content">
+        <h2>Welcome to Our School!</h2>
+        <p>We provide high-quality education with a focus on innovation, creativity, and holistic development. Our campus is equipped with modern facilities to support learning, sports, and extracurricular activities. Join us to be part of an enriching academic environment!</p>
+        <p>At Bright Horizon Academy, we believe in nurturing young minds and shaping the leaders of tomorrow. Our mission is to provide an environment that fosters academic excellence, creativity, and holistic development. With a rich tradition of excellence and innovation, we are dedicated to empowering students to achieve their dreams and make a meaningful impact on the world.</p>
+        <img src="Screenshot 1.jpg" alt="School Building" class="section-image">
+    </div>
+
+    <div class="extra-content">
+        <h2>Our Vision</h2>
+        <p>To inspire every child to discover their potential and pursue excellence in a world of infinite possibilities.</p>
+        <img src="Screenshot 2.jpg" alt="Our Vision" class="section-image">
+    </div>
+
+    <div class="extra-content">
+        <h2>Our Mission</h2>
+        <ul>
+            <li>To foster creativity and critical thinking.</li>
+            <li>To provide a supportive and inclusive learning environment.</li>
+            <li>To develop confident, responsible, and compassionate individuals.</li>
+        </ul>
+        <img src="Screenshot 3.jpg" alt="Our Mission" class="section-image">
+    </div>
+
+    <div class="extra-content">
+        <h2>Our Campuses</h2>
+        <div class="flexbox-section">
+            <div class="flexbox-card">
+                <img src="Campus 1.jpeg" alt="Chennai Campus">
+                <h3>Chennai Campus</h3>
+                <p>Located in the heart of Chennai, offering world-class facilities and education.</p>
+            </div>
+            <div class="flexbox-card">
+                <img src="Campus 2.jpeg" alt="Bangalore Campus">
+                <h3>Bangalore Campus</h3>
+                <p>A vibrant campus fostering innovation and excellence in Bangalore.</p>
+            </div>
+            <div class="flexbox-card">
+                <img src="Campus 3.jpeg" alt="Hyderabad Campus">
+                <h3>Hyderabad Campus</h3>
+                <p>State-of-the-art infrastructure and diverse learning opportunities in Hyderabad.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="extra-content">
+        <h2>Safety Measures</h2>
+        <div class="flexbox-section">
+            <div class="flexbox-card">
+                <img src="Health and Hygiene measures at school______ 23-12-2024 at 10-06-33.jpeg" alt="Health Safety">
+                <h3>Health Safety</h3>
+                <p>Regular health check-ups and well-equipped medical facilities.</p>
+            </div>
+            <div class="flexbox-card">
+                <img src="Cyber Safety Initiatives.jpeg" alt="Campus Security">
+                <h3>Campus Security</h3>
+                <p>24/7 surveillance and security personnel to ensure a safe environment.</p>
+            </div>
+            <div class="flexbox-card">
+                <img src="Secure Campus Infrastructure.jpeg" alt="Emergency Preparedness">
+                <h3>Emergency Preparedness</h3>
+                <p>Frequent drills and training to handle emergencies effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><b>Campuses:</b> Chennai | Bangalore | Hyderabad</p>
+        <p>Contact: +123-456-7890 | Email: info@brighthorizonacademy.com</p>
+        <p>&copy; 2024 Bright Horizon Academy</p>
+    </footer>
+
+    <script>
+        // JavaScript to make the website functional
+
+        // Button Click Event
+        document.getElementById('admissionButton').addEventListener('click', function () {
+            alert('Admissions are now open! Visit the Admissions page for more details.');
+        });
+
+        // Navigation Links Validation
+        const navLinks = document.querySelectorAll('#navMenu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                if (!link.href.includes('.html')) {
+                    event.preventDefault();
+                    alert('This page is under construction.');
+                }
+            });
+        });
+
+        // Hover Effect on Logo
+        const logo = document.getElementById('logo');
+        logo.addEventListener('mouseover', () => {
+            logo.style.border = '2px solid blue';
+        });
+
+        logo.addEventListener('mouseout', () => {
+            logo.style.border = '2px solid #ddd';
+        });
+    </script>
+
+    
+</body>
+</html>

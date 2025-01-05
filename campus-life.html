@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life - Bright Horizon Academy</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(to bottom, #f3f7f9, #e3ecee);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #57b7b8, #286d74);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .content h2 {
+            color: #286d74;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .grid div {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .grid div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid img {
+            width: 100%;
+            border-bottom: 2px solid #286d74;
+        }
+
+        .description {
+            padding: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #286d74, #103841);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Campus Life</h1>
+        <p>Experience life at Bright Horizon Academy – vibrant, engaging, and unforgettable.</p>
+    </header>
+
+    <div class="content">
+        <h2>Life at Campus</h2>
+        <div class="grid">
+            <div>
+                <img src="library.jpg" alt="Library">
+                <p class="description">State-of-the-art library with thousands of books, journals, and digital resources.</p>
+            </div>
+            <div>
+                <img src="sports.jpg" alt="Sports Facilities">
+                <p class="description">World-class sports facilities to nurture athletic talent.</p>
+            </div>
+            <div>
+                <img src="culture.jpg" alt="Events">
+                <p class="description">Exciting cultural and academic events to engage students throughout the year.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bright Horizon Academy</p>
+    </footer>
+</body>
+</html>
