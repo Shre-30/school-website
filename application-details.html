@@ -63,6 +63,16 @@
         .submit-btn:hover {
             background-color: rgb(79, 165, 165);
         }
+        .success-message {
+            display: none;
+            padding: 15px;
+            background-color:white;
+            color: rgb(26, 30, 65);
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
         footer {
             background-color: rgb(79, 165, 165);
             color: white;
@@ -82,7 +92,7 @@
         <h2>Application Details</h2>
         <p>Please fill out the form below to submit your application. Our admissions team will review your submission and get back to you with the next steps.</p>
 
-        <form action="submit-application.php" method="post">
+        <form id="applicationForm">
             <label for="student-name">Student Name</label>
             <input type="text" id="student-name" name="student_name" placeholder="Enter student's full name" required>
 
@@ -121,10 +131,22 @@
 
             <button type="submit" class="submit-btn">Submit Application</button>
         </form>
+
+        <div class="success-message" id="successMessage">
+            Your application has been successfully submitted! We will contact you soon.
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Bright Horizon Academy. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset(); // Reset form fields
+        });
+    </script>
 </body>
 </html>
