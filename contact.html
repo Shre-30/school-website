@@ -69,6 +69,13 @@
             padding: 10px;
             margin-top: 20px;
         }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+            color: green;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +85,7 @@
     </header>
 
     <div class="contact-form">
-        <form>
+        <form id="contactForm">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
@@ -90,10 +97,34 @@
 
             <button type="submit">Send Message</button>
         </form>
+        <p id="formFeedback">Thank you for contacting us! Your message has been received.</p>
     </div>
 
     <footer>
         <p>&copy; 2024 Bright Horizon Academy</p>
     </footer>
+
+    <script>
+        // Contact Us Form Handling
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get the form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Display success message
+            const formFeedback = document.getElementById("formFeedback");
+            formFeedback.style.display = "block";
+            formFeedback.textContent = "Thank you for contacting us! Your message has been received.";
+
+            // Optionally, clear the form
+            event.target.reset();
+        });
+    </script>
 </body>
 </html>
+
+
+
