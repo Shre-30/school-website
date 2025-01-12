@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Project - School Website</title>
     <style>
-        
         /* General Styles */
         body {
             background-color: #f0f4f8;
@@ -197,6 +196,7 @@
             }
         }
     </style>
+</head>
 <body>
     <div class="container">
         <img src="BHA logo.jpg" alt="Logo">
@@ -216,7 +216,6 @@
     <div class="extra-content">
         <h2>Welcome to Our School!</h2>
         <p>We provide high-quality education with a focus on innovation, creativity, and holistic development. Our campus is equipped with modern facilities to support learning, sports, and extracurricular activities. Join us to be part of an enriching academic environment!</p>
-        <p>At Bright Horizon Academy, we believe in nurturing young minds and shaping the leaders of tomorrow. Our mission is to provide an environment that fosters academic excellence, creativity, and holistic development. With a rich tradition of excellence and innovation, we are dedicated to empowering students to achieve their dreams and make a meaningful impact on the world.</p>
         <img src="Screenshot 1.jpg" alt="School Building" class="section-image">
     </div>
 
@@ -287,16 +286,20 @@
     <script>
         // JavaScript to make the website functional
 
-        // Button Click Event
-        document.getElementById('admissionButton').addEventListener('click', function () {
-            alert('Admissions are now open! Visit the Admissions page for more details.');
-        });
+        // Button Click Event for Admissions
+        const admissionButton = document.querySelector('.content button');
+        if (admissionButton) {
+            admissionButton.addEventListener('click',
+function () {
+                    alert('Admissions are now open! Visit the Admissions page for more details.');
+                });
+        }
 
         // Navigation Links Validation
-        const navLinks = document.querySelectorAll('#navMenu a');
+        const navLinks = document.querySelectorAll('.content ul li a');
         navLinks.forEach(link => {
             link.addEventListener('click', function (event) {
-                if (!link.href.includes('.html')) {
+                if (!link.getAttribute('href').includes('.html')) {
                     event.preventDefault();
                     alert('This page is under construction.');
                 }
@@ -304,16 +307,53 @@
         });
 
         // Hover Effect on Logo
-        const logo = document.getElementById('logo');
-        logo.addEventListener('mouseover', () => {
-            logo.style.border = '2px solid blue';
+        const logo = document.querySelector('.container img');
+        if (logo) {
+            logo.addEventListener('mouseover', () => {
+                logo.style.border = '4px solid blue';
+            });
+
+            logo.addEventListener('mouseout', () => {
+                logo.style.border = '2px solid #ddd';
+            });
+        }
+
+        // Enhance Flexbox Cards Interaction
+        const flexboxCards = document.querySelectorAll('.flexbox-card');
+        flexboxCards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
+                card.style.transform = 'scale(1.05)';
+            });
+
+            card.addEventListener('mouseout', () => {
+                card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                card.style.transform = 'scale(1)';
+            });
         });
 
-        logo.addEventListener('mouseout', () => {
-            logo.style.border = '2px solid #ddd';
+        // Add an Auto Scroll-to-Top Feature on Load
+        window.addEventListener('load', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // Dynamic Welcome Message (Optional)
+        const extraContentHeading = document.querySelector('.extra-content h2');
+        if (extraContentHeading) {
+            const currentTime = new Date();
+            const hours = currentTime.getHours();
+            let greeting;
+
+            if (hours < 12) {
+                greeting = 'Good Morning';
+            } else if (hours < 18) {
+                greeting = 'Good Afternoon';
+            } else {
+                greeting = 'Good Evening';
+            }
+
+            extraContentHeading.textContent = `${greeting}, Welcome to Our School!`;
+        }
     </script>
-
-    
 </body>
 </html>
